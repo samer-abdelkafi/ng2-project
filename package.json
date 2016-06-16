@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "server/index.js",
   "license": "ISC",
+  "engines": {
+    "node": "4.4.5"
+  }
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
