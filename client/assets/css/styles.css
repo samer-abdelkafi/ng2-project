@@ -1,0 +1,56 @@
+
+.page-content {
+  padding: 80px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mdl-layout__drawer-button:before {
+  content: '';
+}
+
+.welcome-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../img/welcome-header.jpg') center / cover;
+}
+
+.users-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 70px;
+}
+
+.user-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+}
+
+.users-card-wide > .mdl-list > .mdl-list__item {
+  cursor: hand;
+}
+
+.user-list-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.user-detail-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 16px;
+}
+
+.user-detail-row > div > span {
+  line-height: 50px;
+  vertical-align: middle;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+.user-detail-row > div > i {
+  vertical-align: middle;
+  font-size: 18px;
+}

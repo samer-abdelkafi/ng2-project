@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <base href="/"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ng2-project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.min.css">-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="libs/es6-shim/es6-shim.min.js"></script>
+    <script src="libs/zone.js/dist/zone.js"></script>
+    <script src="libs/reflect-metadata/Reflect.js"></script>
+    <script src="libs/systemjs/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="app/systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) {
+            console.error(err);
+        });
+    </script>
+
+    <script src="libs/material-design-lite/dist/material.min.js"></script>
+
+</head>
+
+<!-- 3. Display the application -->
+<body class="mdl-color--grey-100">
+<my-app>Loading...</my-app>
+</body>
+</html>

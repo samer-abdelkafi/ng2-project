@@ -1,0 +1,10 @@
+{
+  "version": false,
+  "ambientDependencies": {
+    "node": "github:DefinitelyTyped/DefinitelyTyped/node/node.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
+    "express-serve-static-core": "github:DefinitelyTyped/DefinitelyTyped/express-serve-static-core/express-serve-static-core.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
+    "express": "github:DefinitelyTyped/DefinitelyTyped/express/express.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
+    "serve-static": "github:DefinitelyTyped/DefinitelyTyped/serve-static/serve-static.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34",
+    "mime": "github:DefinitelyTyped/DefinitelyTyped/mime/mime.d.ts#a44529fcb1e1cdc0355e71c42a6048de99b57c34"
+  }
+}
