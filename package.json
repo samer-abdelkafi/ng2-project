@@ -11,7 +11,8 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "postinstall": "gulp default"
+    "postinstall": "gulp default",
+     "start": "node app/index.js", 
   },
   "dependencies": {
     "@angular/common":  "2.0.0-rc.1",
