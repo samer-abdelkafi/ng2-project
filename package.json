@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
-    "postinstall": "gulp"
+    "postinstall": "gulp default"
   },
   "dependencies": {
     "@angular/common":  "2.0.0-rc.1",
