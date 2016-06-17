@@ -22,7 +22,7 @@ var server = app.listen(port, function() {
 });
 
 
-MongoClient.connect('mongodb://localhost:27017/mydata', function(err, db) {
+MongoClient.connect('mongodb://test:test@ds021761.mlab.com:21761/mydata', function(err, db) {
     if (err) {
         throw err;
     }
