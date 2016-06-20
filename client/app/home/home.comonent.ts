@@ -9,8 +9,10 @@ import {Component, OnInit}   from '@angular/core';
             <h2 class="mdl-card__title-text">Welcome</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
+            This is a demo project for starting developping a web application with Angular2 Framework.<br>
+            For more information and details you can read my Wordpress post <a href="">here</a>.<br>
+            The source code of the project is available on GitHub <a href="">here</a>.<br>
+            This demo uses the open source frameworks and projects below:
           </div>
           <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
