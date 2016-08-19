@@ -3,7 +3,6 @@ var path = require('path');
 var sourcemaps = require('gulp-sourcemaps');
 var ts = require('gulp-typescript');
 var del = require('del');
-var concat = require('gulp-concat');
 var runSequence = require('run-sequence');
 var gulpTypings = require("gulp-typings");
 
@@ -65,8 +64,8 @@ gulp.task('buildIndex', function () {
     var copyJsNPMDependencies = gulp.src(mappedPaths, {base: 'node_modules'})
         .pipe(gulp.dest('dist/libs'));
 
-    //Let's copy our index into dist
-    var copyIndex = gulp.src(['client/index.html', 'client/**/*.js'])
+    //Let's copy html and js to dist
+    var copyIndex = gulp.src(['client/**/*.html', 'client/**/*.js'])
         .pipe(gulp.dest('dist'));
 
     var copyAsserts = gulp.src('client/assets/**/*')
@@ -90,6 +89,26 @@ gulp.task('watch', ['buildServer'], function () {
     gulp.watch('server/*.ts', ['buildServer']);
     gulp.watch('client/**/*.ts', ['buildClient']);
 });
+
+// bundle
+gulp.task('bundle', function () {
+    var path = require('path');
+    var Builder = require('systemjs-builder');
+    var builder = new Builder('./dist', './dist/app/systemjs.config.js');
+ 
+    builder
+        .buildStatic('./dist/app/main.js', './dist/libs/bundle.js')
+        .then(function() {
+          console.log('Build complete');
+    })
+    .catch(function(err) {
+          console.log('Build error');
+          console.log(err);
+    });
+
+});
+
+
 
 // BUILD
 
