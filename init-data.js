@@ -1,0 +1,4 @@
+use mydata
+
+db.users.insert([{"id" : "1" , "name" : "Steve" , "mail" : "steve@apple.com" , "phone" : "+33 0120255555" , "adress" : "280 Central Park West New York, NY 10024"},{"id" : "2" , "name" : "Narco" , "mail" : "narco@gamil.com" , "phone" : "+33 0120255555" , "adress" : "280 Central Park West New York, NY 10024"},{"id" : "3" , "name" : "Bombasto" , "mail" : "bombasto@gmail.com" , "phone" : "+33 0120255555" , "adress" : "280 Central Park West New York, NY 10024"},{"id" : "4" , "name" : "Celeritas" , "mail" : "bombasto@gmail.com" , "phone" : "+33 0120255555" , "adress" : "280 Central Park West New York, NY 10024"},{"id" : "5" , "name" : "Magneta" , "mail" : "bombasto@gmail.com" , "phone" : "+33 0120255555" , "adress" : "280 Central Park West New York, NY 10024"},{"id" : "6" , "name" : "RubberMan" , "mail" : "bombasto@gmail.com" , "phone" : "+33 0120255555" , "adress" : "280 Central Park West New York, NY 10024"}]);
+
