@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "gulp": "3.9.1",
-    "gulp-concat": "2.6.0",
     "gulp-sourcemaps": "1.6.0",
     "gulp-typescript": "2.13.4",
     "gulp-tsd": "0.1.1",
@@ -56,6 +55,7 @@
     "concurrently": "^2.0.0",
     "lite-server": "^2.1.0",
     "typescript": "1.8.10",
-    "del": "2.2.0"
+    "del": "2.2.0",
+    "systemjs-builder" : "0.15.23"
   }
 }
