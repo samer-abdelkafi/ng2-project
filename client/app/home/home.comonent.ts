@@ -1,5 +1,5 @@
 import {Component, OnInit}   from '@angular/core';
-import {OnActivate, Router, RouteSegment, RouteTree} from '@angular/router';
+import { Router }              from '@angular/router';
 import {Techno, HomeService}   from './home.service';
 
 
@@ -7,7 +7,7 @@ import {Techno, HomeService}   from './home.service';
     templateUrl : 'app/home/home.comonent.html',
     providers: [HomeService]
 })
-export class HomeComponent implements OnActivate {
+export class HomeComponent implements OnInit {
     
     technologies:Techno[];
     errorMessage:string;
@@ -15,7 +15,7 @@ export class HomeComponent implements OnActivate {
     constructor(private service:HomeService) {
     }
     
-      routerOnActivate(curr:RouteSegment, prev?:RouteSegment, currTree?:RouteTree, prevTree?:RouteTree):void {
+    ngOnInit() {
           this.service.getTechno().subscribe(
             technologies => this.technologies = technologies,
             error =>  this.errorMessage = <any>error);

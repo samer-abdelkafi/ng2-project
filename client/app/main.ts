@@ -1,11 +1,5 @@
 /// <reference path="../typings/browser.d.ts" />
-import { bootstrap }    from '@angular/platform-browser-dynamic';
-import {ROUTER_PROVIDERS} from '@angular/router';
-import {AppComponent} from './app.component'
-import {HTTP_PROVIDERS} from '@angular/http';
-import 'rxjs/Rx';
+import { platformBrowserDynamic }      from '@angular/platform-browser-dynamic';
 
-import {enableProdMode} from '@angular/core';
-enableProdMode();
-
-bootstrap(AppComponent, [ROUTER_PROVIDERS, HTTP_PROVIDERS]);
+import { AppModule } from './app.module';
+platformBrowserDynamic().bootstrapModule(AppModule);

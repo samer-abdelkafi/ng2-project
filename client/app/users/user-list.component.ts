@@ -1,5 +1,5 @@
 import {Component, OnInit}   from '@angular/core';
-import {OnActivate, Router, RouteSegment, RouteTree} from '@angular/router';
+import {Router} from '@angular/router';
 import {User, UserService}   from './user.service';
 
 
@@ -7,7 +7,7 @@ import {User, UserService}   from './user.service';
     templateUrl: 'app/users/user-list.component.html',
     providers: [UserService],
 })
-export class UserListComponent implements OnActivate {
+export class UserListComponent implements OnInit {
     users:User[];
     errorMessage:string;
 
@@ -18,8 +18,8 @@ export class UserListComponent implements OnActivate {
                 private router:Router) {
     }
 
-    routerOnActivate(curr:RouteSegment, prev?:RouteSegment, currTree?:RouteTree, prevTree?:RouteTree):void {
-        this.selectedId = +curr.getParam('id');
+    ngOnInit() {
+        //this.selectedId = +curr.getParam('id');
         this.service.getUsers().subscribe(
             users => this.users = users,
             error =>  this.errorMessage = <any>error);

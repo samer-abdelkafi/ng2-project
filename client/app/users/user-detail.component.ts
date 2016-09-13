@@ -1,25 +1,30 @@
-import {Component,  OnInit}  from '@angular/core';
-import {Router, OnActivate ,RouteSegment} from '@angular/router';
-import {User, UserService}   from './user.service';
+import {Component,  OnInit}      from '@angular/core';
+import {Router, ActivatedRoute}  from '@angular/router';
+import {User, UserService}       from './user.service';
+import { Subscription }          from 'rxjs/Subscription';
 
 
 @Component({
-      templateUrl: 'app/users/user-detail.component.html',
-      providers: [UserService],
+    templateUrl: 'app/users/user-detail.component.html',
+    providers: [UserService],
 })
-export class UserDetailComponent implements OnActivate {
-    user:User;
-    errorMessage:string;
+export class UserDetailComponent implements OnInit {
+    user: User;
+    errorMessage: string;
+    private sub: Subscription;
 
-    constructor(private router:Router,
-                private service:UserService) {
-    }
+    constructor(
+        private router: Router,
+        private route: ActivatedRoute,
+        private service: UserService) {}
 
-    routerOnActivate(curr:RouteSegment):void {
-        let id = +curr.getParam('id');
-        this.service.getUser(id).subscribe(
-            user => this.user = user,
-            error =>  this.errorMessage = <any>error);
+    ngOnInit() {
+        this.sub = this.route.params.subscribe(params => {
+            let id = +params['id']; // (+) converts string 'id' to a number
+            this.service.getUser(id).subscribe(
+                user => this.user = user,
+                error => this.errorMessage = <any>error);
+        });    
     }
 
 
