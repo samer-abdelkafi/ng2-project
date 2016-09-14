@@ -7,10 +7,6 @@
     "node": "4.5.0"
   },
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "lite": "lite-server",
     "postinstall": "gulp default",
     "start": "node dist/server.js" 
   },
