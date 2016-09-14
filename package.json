@@ -15,7 +15,7 @@
     "start": "node dist/server.js" 
   },
   "dependencies": {
-    "@angular/common":  "2.0.0-rc.7",
+    "@angular/common":  "^2.0.0-rc.7",
     "@angular/compiler":  "2.0.0-rc.7",
     "@angular/core":  "2.0.0-rc.7",
     "@angular/http":  "2.0.0-rc.7",
