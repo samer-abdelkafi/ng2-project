@@ -9,12 +9,6 @@ app.use('/assets', express.static(path.resolve(__dirname, 'assets')));
 app.use('/app', express.static(path.resolve(__dirname, 'app')));
 app.use('/libs', express.static(path.resolve(__dirname, 'libs')));
 
-var renderIndex = (req: express.Request, res: express.Response) => {
-    res.sendFile(path.resolve(__dirname, 'index.html'));
-}
-
-app.get('/', renderIndex);
-
 
 var server = app.listen(port, function() {
     var port = server.address().port;
@@ -54,3 +48,9 @@ app.get("/api/users/:id", (req, res) => {
     });
 
 });
+
+var renderIndex = (req: express.Request, res: express.Response) => {
+    res.sendFile(path.resolve(__dirname, 'index.html'));
+}
+
+app.get('/*', renderIndex);

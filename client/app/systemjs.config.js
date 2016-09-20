@@ -34,9 +34,6 @@
         packages: packages
     }
 
-    // filterSystemConfig - index.html's chance to modify config before we register it.
-    //if (global.filterSystemConfig) { global.filterSystemConfig(config); }
-
     System.config(config);
 
 })(this);
