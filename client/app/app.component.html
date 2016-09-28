@@ -21,6 +21,9 @@
     </nav>
   </div>
   <main class="mdl-layout__content">
+       <mdl-spinner [hidden]="!displySpinner" single-color active class="loading"></mdl-spinner>
+       <div [hidden]="displySpinner">
        <router-outlet></router-outlet>
+       </div>
   </main>
 </div>

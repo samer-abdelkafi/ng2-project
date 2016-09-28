@@ -12,16 +12,19 @@
         '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
         '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
         '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
+        '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
         
         'rxjs':     'libs/rxjs',
-        '@angular': 'libs/@angular'
+        '@angular': 'libs/@angular',
+        'angular2-mdl': 'libs/angular2-mdl'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'app':      { main: './main.js',  defaultExtension: 'js' },
         'rxjs':     { defaultExtension: 'js' },
-        'angular2-in-memory-web-api': {defaultExtension: 'js'}
+        'angular2-in-memory-web-api': {defaultExtension: 'js'},
+        'angular2-mdl': { main: 'dist/components/index.js'}
     };
 
 

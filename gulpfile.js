@@ -51,7 +51,8 @@ var jsNPMDependencies = [
     'reflect-metadata/Reflect.js',
     'systemjs/dist/system.src.js',
     'rxjs/**/*.js',
-    '@angular/**/*.js'
+    '@angular/**/*.js',
+    'angular2-mdl/**/*.js'
 ];
 
 

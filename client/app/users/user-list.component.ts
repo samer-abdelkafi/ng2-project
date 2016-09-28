@@ -1,11 +1,10 @@
 import {Component, OnInit}   from '@angular/core';
-import {Router} from '@angular/router';
-import {User, UserService}   from './user.service';
+import {Router, ActivatedRoute} from '@angular/router';
+import {User}   from './user.service';
 
 
 @Component({
-    templateUrl: 'app/users/user-list.component.html',
-    providers: [UserService],
+    templateUrl: 'app/users/user-list.component.html'
 })
 export class UserListComponent implements OnInit {
     users:User[];
@@ -14,17 +13,13 @@ export class UserListComponent implements OnInit {
     private selectedId:number;
 
 
-    constructor(private service:UserService,
+    constructor(private route: ActivatedRoute,
                 private router:Router) {
     }
 
     ngOnInit() {
-        //this.selectedId = +curr.getParam('id');
-        this.service.getUsers().subscribe(
-            users => this.users = users,
-            error =>  this.errorMessage = <any>error);
+        this.users = this.route.snapshot.data['users'];
     }
-
 
     isSelected(user:User) {
         return user.id === this.selectedId;

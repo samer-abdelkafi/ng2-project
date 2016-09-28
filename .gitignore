@@ -3,3 +3,6 @@ dist/
 node_modules/
 .git/
 .c9/
+README-C9.txt
+mongod
+ 

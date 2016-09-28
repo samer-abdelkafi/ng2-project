@@ -1,25 +1,31 @@
 import {Component, OnInit}   from '@angular/core';
-import { Router }              from '@angular/router';
-import {Techno, HomeService}   from './home.service';
+import { ActivatedRoute }              from '@angular/router';
+import {Techno}   from './home.service';
 
 
 @Component({
-    templateUrl : 'app/home/home.comonent.html',
-    providers: [HomeService]
+    templateUrl : 'app/home/home.comonent.html'
 })
 export class HomeComponent implements OnInit {
     
     technologies:Techno[];
     errorMessage:string;
     
-    constructor(private service:HomeService) {
+    constructor(private route: ActivatedRoute) {
     }
     
+    // ngOnInit() {
+    //       this.service.getTechno().subscribe(
+    //         technologies => this.technologies = technologies,
+    //         error =>  this.errorMessage = <any>error);
+    // }
+    
+    
     ngOnInit() {
-          this.service.getTechno().subscribe(
-            technologies => this.technologies = technologies,
-            error =>  this.errorMessage = <any>error);
+        this.technologies = this.route.snapshot.data['technologies'];
     }
+
+    
     
   
 }

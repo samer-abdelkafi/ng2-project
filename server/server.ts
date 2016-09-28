@@ -26,13 +26,14 @@ MongoClient.connect('mongodb://test:test@ds021761.mlab.com:21761/mydata', functi
 
 app.get("/api/users", (req, res) => {
     // Get all registrations
+    
     database.collection('users').find().toArray(function(err, result) {
-        if (err) {
-            console.log("Can't get users from database : " + err);
-            throw err;
-        }
-        console.log("/api/users result size = " + result.length);
-        res.send(result);
+    if (err) {
+     console.log("Can't get users from database : " + err);
+     throw err;
+    }
+    console.log("/api/users result size = " + result.length);
+    res.send(result);
     });
 
 });

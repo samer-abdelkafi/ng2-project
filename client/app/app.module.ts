@@ -1,6 +1,7 @@
 import { NgModule }             from '@angular/core';
 import { BrowserModule }        from '@angular/platform-browser';
 import { HttpModule }           from '@angular/http';
+import { MdlModule }            from 'angular2-mdl';
 
 import { AppComponent }         from './app.component';
 import { routing,
@@ -9,11 +10,13 @@ import {HomeComponent}          from './home/home.comonent';
 import {UserListComponent}      from './users/user-list.component';
 import {UserDetailComponent}    from './users/user-detail.component';
 
+
 @NgModule({
   imports: [
     BrowserModule,
     routing,
-    HttpModule
+    HttpModule,
+    MdlModule
   ],
   declarations: [
     AppComponent,
