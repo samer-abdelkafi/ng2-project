@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {MDL} from './directives/MaterialDesignLite';
 import {SpinnerComponent} from './spiner.component';
 import { Router, NavigationStart, NavigationEnd} from '@angular/router';
 import './rxjs-operators';
@@ -13,6 +12,8 @@ export class AppComponent {
      
     public displySpinner:boolean = false;
     
+    private timestamp : number;
+    
     constructor(private router: Router) {
         //  this.router.events.pairwise().subscribe((event) => {
             
@@ -21,12 +22,17 @@ export class AppComponent {
         
         if(event instanceof NavigationStart) {
             this.displySpinner = true;
+            this.timestamp = (new Date()).getTime();
             console.log("nav starting");
-        }
-        
-        if(event instanceof NavigationEnd) {
-            this.displySpinner = false;
-            console.log("nav stop");
+        } else if(event instanceof NavigationEnd) {
+            var delay = (new Date()).getTime() - this.timestamp;
+            delay = (delay >= 1000 ? 0 : delay);
+            
+            setTimeout(() => {
+                this.displySpinner = false;
+                console.log("nav stop");
+            }, delay);
+            
         }
         
         // NavigationEnd
