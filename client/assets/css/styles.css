@@ -26,6 +26,13 @@
   background: url('../img/welcome-header.svg') center / cover;
 }
 
+.welcome-presentation-text {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 16px;
+}
+
+
 .users-card-wide > .mdl-card__title {
   color: #fff;
   height: 70px;
